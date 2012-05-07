@@ -107,7 +107,7 @@ static const CGFloat kCancelHighlightThreshold = 4.0f;
 - (void)setStyle:(TTStyle*)style forFrame:(TTStyledBoxFrame*)frame {
   if ([frame isKindOfClass:[TTStyledInlineFrame class]]) {
     TTStyledInlineFrame* inlineFrame = (TTStyledInlineFrame*)frame;
-    while (inlineFrame.inlinePreviousFrame) {
+    while (inlineFrame.inlinePreviousFrame && NO) {
       inlineFrame = inlineFrame.inlinePreviousFrame;
     }
     while (inlineFrame) {
