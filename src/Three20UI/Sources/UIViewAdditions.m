@@ -39,6 +39,7 @@
  * This code for synthesizing touch events is derived from:
  * http://cocoawithlove.com/2008/10/synthesizing-touch-event-on-iphone.html
  */
+/*
 @interface GSEventFake : NSObject {
   @public
   int ignored1[5];
@@ -82,23 +83,24 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @interface UITouch (TTCategory)
+*/
+/**
+ *
+ */
+//- (id)initInView:(UIView *)view location:(CGPoint)location;
 
 /**
  *
  */
-- (id)initInView:(UIView *)view location:(CGPoint)location;
-
-/**
- *
- */
-- (void)changeToPhase:(UITouchPhase)phase;
-
+//- (void)changeToPhase:(UITouchPhase)phase;
+/*
 @end
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////
+
 @implementation UITouch (TTCategory)
 
 
@@ -163,6 +165,7 @@
 
 
 @end
+*/
 
 #endif
 
@@ -424,7 +427,7 @@ TT_FIX_CATEGORY_BUG(UIViewAdditions)
 
 
 #ifdef DEBUG
-
+/*
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)simulateTapAtPoint:(CGPoint)location {
   UITouch *touch = [[[UITouch alloc] initInView:self location:location] autorelease];
@@ -437,7 +440,7 @@ TT_FIX_CATEGORY_BUG(UIViewAdditions)
   UIEvent *eventUp = [[[UIEvent alloc] initWithTouch:touch] autorelease];
   [touch.view touchesEnded:[NSSet setWithObject:touch] withEvent:eventUp];
 }
-
+*/
 #endif
 
 

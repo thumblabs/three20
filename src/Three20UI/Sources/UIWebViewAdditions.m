@@ -54,7 +54,7 @@ TT_FIX_CATEGORY_BUG(UIWebViewAdditions)
 
   return CGRectMake(x, y, width, height);
 }
-
+/*
 #ifdef DEBUG
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -69,6 +69,6 @@ TT_FIX_CATEGORY_BUG(UIWebViewAdditions)
 }
 
 #endif
-
+*/
 
 @end
