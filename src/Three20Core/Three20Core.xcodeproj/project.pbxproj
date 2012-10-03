@@ -11,7 +11,7 @@
 		6656B2531354035900B34AB5 /* TTAvailability.h in Headers */ = {isa = PBXBuildFile; fileRef = 6656B2521354035900B34AB5 /* TTAvailability.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6656B2551354035F00B34AB5 /* TTAvailability.m in Sources */ = {isa = PBXBuildFile; fileRef = 6656B2541354035F00B34AB5 /* TTAvailability.m */; };
 		66A0530A132EB47900132434 /* Three20.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A05309132EB47900132434 /* Three20.m */; };
-		66A0530C132EB47F00132434 /* Three20.h in wHeaders */ = {isa = PBXBuildFile; fileRef = 66A0530B132EB47F00132434 /* Three20.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		66A0530C132EB47F00132434 /* Three20.h in Headers */ = {isa = PBXBuildFile; fileRef = 66A0530B132EB47F00132434 /* Three20.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		66ADC9091290B23A00855386 /* TTExtensionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ADC9071290B23A00855386 /* TTExtensionInfo.m */; };
 		66ADC90F1290B24D00855386 /* TTExtensionInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 66ADC90E1290B24D00855386 /* TTExtensionInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		66ADCE681291BC1E00855386 /* TTExtensionInfoPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 66ADCE661291BC1E00855386 /* TTExtensionInfoPrivate.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -549,7 +549,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6E55A4B31183CA80002768DE /* Library.xcconfig */;
 			buildSettings = {
-				"ARCHS[sdk=iphoneos*]" = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = (
+					armv7,
+					armv6,
+				);
+				"ARCHS[sdk=iphoneos*]" = (
+					armv7,
+					armv6,
+				);
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -579,7 +586,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6E55A4B31183CA80002768DE /* Library.xcconfig */;
 			buildSettings = {
-				"ARCHS[sdk=iphoneos*]" = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = (
+					armv7,
+					armv6,
+				);
+				"ARCHS[sdk=iphoneos*]" = (
+					armv7,
+					armv6,
+				);
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -592,7 +606,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6E55A4B31183CA80002768DE /* Library.xcconfig */;
 			buildSettings = {
-				"ARCHS[sdk=iphoneos*]" = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = (
+					armv7,
+					armv6,
+				);
+				"ARCHS[sdk=iphoneos*]" = (
+					armv7,
+					armv6,
+				);
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				SDKROOT = iphoneos;
