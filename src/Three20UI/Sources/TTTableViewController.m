@@ -132,7 +132,7 @@
 
     // You need to set it to nil before changing it or it won't have any effect
     _tableView.delegate = nil;
-    _tableView.delegate = _tableDelegate;
+    _tableView.delegate = [_tableDelegate retain];
   }
 }
 
