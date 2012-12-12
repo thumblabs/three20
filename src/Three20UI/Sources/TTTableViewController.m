@@ -969,7 +969,8 @@
   // Otherwise the delegate will be retained the model.
 
   // You need to set it to nil before changing it or it won't have any effect
-  TT_RELEASE_SAFELY(_tableView.delegate);
+  TT_RELEASE_SAFELY(_tableDelegate);
+  _tableView.delegate = nil;
   [self updateTableDelegate];
 }
 
