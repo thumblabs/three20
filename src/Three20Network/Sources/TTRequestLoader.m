@@ -136,7 +136,13 @@ static const NSInteger kLoadMaxRetries = 2;
   
   NSURLRequest* URLRequest = [_queue createNSURLRequest:request URL:URL];
 
-  _connection = [[NSURLConnection alloc] initWithRequest:URLRequest delegate:self];
+    // Via: http://forums.three20.info/discussion/428/ttthumbsviewcontroller-display-images-while-scrolling/p1
+    //To allow requests while scrolling we must schedule the conenction in other run loop
+    //_connection = [[NSURLConnection alloc] initWithRequest:URLRequest delegate:self];
+    //code above was replaced by the one below
+    _connection = [[NSURLConnection alloc] initWithRequest:URLRequest delegate:self startImmediately:NO];
+    [_connection scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+    [_connection start];
 }
 
 
