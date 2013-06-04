@@ -448,6 +448,19 @@ didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge{
   }
 }
 
+- (BOOL)connection:(NSURLConnection *)connection canAuthenticateAgainstProtectionSpace:(NSURLProtectionSpace *)protectionSpace
+{
+    for (TTURLRequest* request in [[_requests copy] autorelease]) {
+        
+        for (id<TTURLRequestDelegate> delegate in request.delegates) {
+            if ([delegate respondsToSelector:@selector(request:canAuthenticateAgainstProtectionSpace:)]) {
+                return [delegate performSelector:@selector(request:canAuthenticateAgainstProtectionSpace:) withObject:request withObject:protectionSpace];
+            }
+        }
+    }
+    
+    return NO;
+}
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////
